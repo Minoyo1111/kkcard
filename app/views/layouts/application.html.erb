@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KkCard</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render "sharded/nav_bar" %>
+    <div class="flex" >
+      <div class="w-1/6">
+        <%= render "sharded/aside_bar" %>
+      </div>
+      <div class="w-2/3">
+        <%= yield %>
+      </div>
+      <div class="w-1/6 border-2">
+        <%= notice %>
+      </div>
+    </div>
+  </body>
+</html>

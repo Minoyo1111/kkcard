@@ -1,0 +1,17 @@
+<% if board.errors.any? %>
+    <% board.errors.full_messages.each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  <% end %>
+ 
+  
+    <%= form_for(board) do |form| %>
+    <div class="flex justify-center">
+      <div class="w-1/2">
+      <%= form.text_field :title, class: "border-solid border-gray-400 border-2 p-3 md:text-xl w-full", placeholder: "Board Name" %>
+      </div>
+      <div class="pl-5">
+        <%= form.submit name, class:  "py-4 px-6 bg-green-500 text-white font-bold w-full sm:w-32" %>
+      </div>   
+    </div>
+    <% end %>
