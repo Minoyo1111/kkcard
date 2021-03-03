@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# KKcard model 關聯圖
 
-Things you may want to cover:
+![image](https://raw.githubusercontent.com/Minoyo1111/kkcard/main/kkCard.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## KKcard 
+### 簡易的網路社群
+1. 手刻會員登入登出
+2. 看板 CRUD
+3. 看板列表的 API
+4. 文章 CRUD
+5. 留言 AJAX
+6. 按讚功能
