@@ -1,0 +1,46 @@
+<div class="h-screen font-sans login bg-cover">
+  <div class="container mx-auto h-full flex flex-1 justify-center items-center">
+      <div class="w-full max-w-lg">
+        <div class="leading-loose">
+          <div class="max-w-sm m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl">
+            <span class="m-auto text-red-300 font-bold font-medium text-lg"><%= notice if notice %></span>
+              <p class="text-white font-medium text-center text-lg font-bold">Log Up</p>
+              <%= form_for(user, url: url, method: method) do |f| %>
+              <div class="">
+                <%= f.label :nickname, class: "block text-sm text-white" %>
+                <%= f.text_field :nickname, class: "w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white", id: "nickname", placeholder: "nickname"%>
+              </div>
+              
+              <div class="mt-2">
+                <%= f.label :email, class: "block text-sm text-white" %>
+                <%= f.text_field :email, class: "w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white", id: "email", placeholder: "email"%>
+              </div>
+              <div class="mt-2">
+                <%= f.label :password, class: "block text-sm text-white" %>
+                <%= f.password_field :password, class: "w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white", id: "password", placeholder: "password"%>
+              </div>
+              <div class="mt-2">
+                <%= f.label :password_confirmation, class: "block text-sm text-white" %>
+                <%= f.password_field :password_confirmation, class: "w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white", id: "password_confirmation", placeholder: "password_confirmation"%>
+              </div>
+            
+              <div class="mt-4 text-center flex justify-between">
+                <%= f.submit name , class: "px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded w-1/2" %>
+                <%= link_to link_name, link_path, class: "px-4 py-1 text-white font-light tracking-wider bg-gray-500 hover:bg-gray-200 rounded w-1/3" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .login{
+    /*
+      background: url('https://tailwindadmin.netlify.app/dist/images/login-new.jpeg');
+    */
+    background: url('http://bit.ly/2gPLxZ4');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  </style>

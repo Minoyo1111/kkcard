@@ -1,0 +1,5 @@
+$wrong_color: red;
+
+.field_with_errors{
+    border: 1px solid $wrong_color ;
+}

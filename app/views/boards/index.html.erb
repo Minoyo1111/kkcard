@@ -1,10 +1,12 @@
 <div class="board_index p-6 text-right">
-<%= link_to "新增看板", new_board_path, class: "py-4 px-6 bg-green-500 text-white font-bold w-full sm:w-32" %>
+<% if current_user %>
+<%= link_to "新增看板", new_board_path, class: "py-4 px-6 bg-gray-800 text-gray-100 font-bold w-full sm:w-32" %>
+<% end %>
 </div>
-<!-- component -->
+
 <div class="w-full mx-auto">
   <div class="bg-white shadow-md rounded my-6">
-    <table class="text-left w-full border-collapse"> <!--Border collapse doesn't work on this site yet but it's available in newer tailwind versions -->
+    <table class="text-left w-full border-collapse">
       <thead>
         <tr>
           <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">看板列表</th>
@@ -19,11 +21,13 @@
           <td class="py-4 px-6 border-b border-grey-light">
             <%= link_to "編輯", edit_board_path(board.id), class: "text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark" %>
             <%= link_to "刪除", board_path(board.id),method: "delete", data: {confirm: "確定要刪除？"}, class: "text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark" %>
-          
           </td>
         </tr>
         <% end %>
       </tbody>
     </table>
+    <div class="text-center py-2">
+      <%= paginate @boards %>
+    </div>
   </div>
 </div>

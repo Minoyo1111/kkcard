@@ -12,16 +12,7 @@
 
   <body>
     <%= render "sharded/nav_bar" %>
-    <div class="flex" >
-      <div class="w-1/6">
-        <%= render "sharded/aside_bar" %>
-      </div>
-      <div class="w-2/3">
         <%= yield %>
-      </div>
-      <div class="w-1/6 border-2">
-        <%= notice if notice %>
-      </div>
     </div>
   </body>
 </html>

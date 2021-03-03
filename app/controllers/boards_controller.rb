@@ -1,10 +1,10 @@
 class BoardsController < ApplicationController
+  before_action :find_board, only: [:edit, :update, :show, :destory]
   def index
-    @boards = Board.all
+    @boards = Board.all.page(params[:page]).per(10)
   end
 
   def show 
-    @board = Board.find_by(id: params[:id])
   end
 
   def new 
@@ -22,11 +22,9 @@ class BoardsController < ApplicationController
 
 
   def edit
-    @board = Board.find_by(id: params[:id])
   end
 
   def update
-    @board = Board.find_by(id: params[:id])
     if @board.update(board_params)
       redirect_to boards_path, notice: "看板已更新！"
     else
@@ -35,11 +33,13 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    @board = Board.find_by(id: params[:id])
     @board.destroy
     redirect_to boards_path, notice: "看板已刪除！"
   end
 private
+  def find_board
+    @board = Board.find(params[:id])
+  end
   def board_params
     params.require(:board).permit(:title)
   end
