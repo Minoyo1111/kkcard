@@ -1,8 +1,7 @@
 # README
 
 # KKcard model 關聯圖
-
-![image](https://raw.githubusercontent.com/Minoyo1111/kkcard/main/kkCard.png)
+<img src="https://raw.githubusercontent.com/Minoyo1111/kkcard/main/kkCard.png" width="375">
 
 ## KKcard 
 ### 簡易的網路社群
